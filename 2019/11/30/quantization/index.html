@@ -23,7 +23,7 @@
 <meta property="og:description" content="量化是指将连续分布的数据或者较大的数据集合转化为离散形式的处理。在信号处理、图片处理、数据压缩等方面，量化都有着诸多的应用，而本文将聚焦于神经网络中的量化。">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="data:image/png;base64,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">
-<meta property="og:updated_time" content="2019-12-01T05:00:23.156Z">
+<meta property="og:updated_time" content="2019-12-01T08:10:41.026Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="神经网络量化">
 <meta name="twitter:description" content="量化是指将连续分布的数据或者较大的数据集合转化为离散形式的处理。在信号处理、图片处理、数据压缩等方面，量化都有着诸多的应用，而本文将聚焦于神经网络中的量化。">
@@ -140,7 +140,7 @@
         <span class="column is-narrow">
             
             
-            28 minutes read (About 4200 words)
+            28 minutes read (About 4230 words)
         </span>
         
     </div>
@@ -158,9 +158,17 @@
 <h2 id="基本量化方案"><a href="#基本量化方案" class="headerlink" title="基本量化方案"></a>基本量化方案</h2><p>现有的表示方案主要有以下三类：均匀量化（Uniform Quantization）、2的指数量化（Power of 2 Quantization）和浮点量化（Float Quantization）。</p>
 <h3 id="均匀量化"><a href="#均匀量化" class="headerlink" title="均匀量化"></a>均匀量化</h3><p>均匀量化指的是通过一个 <code>scale</code> 参数，将原始数据 <code>x</code> 转化为该参数和低比特表示 <code>x&#39;</code> （一般为整形值）的乘积，即 <code>scale*x&#39;</code> 。</p>
 <p>均匀量化一般有以下三个步骤：</p>
-<pre class="mermaid">graph TB;
-    搜索数据的极值-->根据极值计算量化参数;
-    根据极值计算量化参数-->量化转换;</pre>
+<ol>
+<li>搜索数据的极值</li>
+<li>根据极值计算量化参数</li>
+<li>量化转换</li>
+</ol>
+<!-- ```mermaid
+graph TB;
+    搜索数据的极值
+    根据极值计算量化参数;
+    量化转换;
+``` -->
 
 <p>对于均匀量化，我们采用如下形式化表示。假设有一组分布在区间$[x_{min}, x_{max}]$的浮点数值需要量化到无符号的$(0,2^{b}-1)$范围内，其中$b$表示量化表示的比特数，比如对于 <code>8bit</code> 量化共有$2^8$个数值。将浮点值转化为整形量化表示的过程需要有两个参数：<code>scale</code> 和 <code>zero-point</code>（$z$） ，<code>scale</code> 表示量化的步长，是一种范围的伸缩变换；而 <code>zero-point</code> 则是一种范围的位移变换。<code>zero-point</code> 是一个整形值，用于确保0值的量化是没有误差的。</p>
 <p>基于上述的问题，<code>scale</code> 和 <code>z</code> 的计算方式分别如下<br>$$<br>scale = \frac{x_{max} - x_{min}}{2^{b}-1}<br>$$<br>$$<br>z = -round(\frac{x_{min}}{scale})<br>$$<br>一旦参数 <code>scale</code> 和 <code>zero-point</code>（$z$） 得以确定，量化就可以通过下面的方式进行：<br>$$<br>x’ = round(\frac{x}{scale})+z<br>$$<br>$$<br>x_{int} = clamp(x’, 0, 2^{b}-1)<br>$$<br>其中，$clamp(x, a, b)=min(max(a, x), b)$。而反量化就是上述的逆过程：<br>$$<br>x_{rec} = (x_{int} - z) \times scale<br>$$</p>
@@ -170,13 +178,17 @@
 <h4 id="浮点步长与定点量化"><a href="#浮点步长与定点量化" class="headerlink" title="浮点步长与定点量化"></a>浮点步长与定点量化</h4><p>当 <code>scale</code> 参数是一个浮点数，此时的均匀量化可以称之为浮点步长均匀量化。当 <code>scale</code> 参数是 $2^n$ 这种表示时，该量化形式称之为定点量化。通过上述的方法所计算出的 <code>scale</code> 一般是一个浮点数，即对应了浮点步长量化。所以接下来介绍一种带符号位的动态定点的量化方法。</p>
 <p>在介绍定点量化的流程之前，我们先来看下定点的表示方案。定点是将数据使用整形值 $x_{int}$ 和一个共享指数 $e$ 联合表示，即<br>$$<br>x_{rec}=x_{int} \times 2^{e}<br>$$<br>定点量化的关键就是要找到合适的共享指数 $e$，使得总体的量化损失最小。一般地，我们认为大值是更为关键的，对神经网络的输出有着直接的影响，所以要保证大值尽可能地被覆盖。而小值的量化结果可能就是$x_{int}=0$，也就是以0替代。</p>
 <p>根据上述基本策略，定点量化步骤如下</p>
-<pre class="mermaid">graph TB;
-    Step1:从原始数据搜索最大值-->Step2:计算最大值的指数部分;
-    Step2:计算最大值的指数部分-->Step3:根据最大值指数计算数据的共享指数;
-    Step3:根据最大值指数计算数据的共享指数-->Step4:数据变换;</pre>
+<!-- ```mermaid
+graph TB;
+    Step1:从原始数据搜索最大值
+    Step2:计算最大值的指数部分;
+    Step3:根据最大值指数计算数据的共享指数;
+    Step4:数据变换;
+``` -->
 
-<p>上述个步骤对应的数学表达如下，</p>
-<p>Step1:<br>$$<br>f=max(|x|)<br>$$<br>Step2：<br>$$<br>e_{f}=floor(log2(f)) + 1<br>$$<br>Step3:<br>$$<br>e=e_{f} - (b-1)<br>$$<br>Step4:<br>$$<br>x_{int}=round(x/2^e)<br>$$<br>其中，$b$表示整形值部分的比特数，而$b-1$则是去掉符号位一个比特之后的比特数。一般地，还需要对量化的结果约束在$b$个比特可以表示的范围内，即$clamp(x_{int}, -2^{b-1}-1, 2^{b-1}-1)$。</p>
+<!-- 上述个步骤对应的数学表达如下， -->
+
+<p>Step1，从原始数据搜索最大值：<br>$$<br>f=max(|x|)<br>$$<br>Step2，计算最大值的指数部分：<br>$$<br>e_{f}=floor(log2(f)) + 1<br>$$<br>Step3，根据最大值指数计算数据的共享指数：<br>$$<br>e=e_{f} - (b-1)<br>$$<br>Step4，数据变换：<br>$$<br>x_{int}=round(x/2^e)<br>$$<br>其中，$b$表示整形值部分的比特数，而$b-1$则是去掉符号位一个比特之后的比特数。一般地，还需要对量化的结果约束在$b$个比特可以表示的范围内，即$clamp(x_{int}, -2^{b-1}-1, 2^{b-1}-1)$。</p>
 <h3 id="浮点量化"><a href="#浮点量化" class="headerlink" title="浮点量化"></a>浮点量化</h3><p>浮点量化就是采用低精度的浮点格式替换高精度的浮点数。在解释浮点量化之前，首先介绍下浮点数的格式。浮点是相对于定点而言的，即其小数点的位置是不固定的。根据IEEE 754标准，浮点数的表示可以分为三个部分，分别是：符号位（sign）、尾数（mantissa）和指数（exponent）。这三个部分的解释如下：</p>
 <ul>
 <li><p>符号位（记做$S$）由一个比特表示，实际表示的值为$(-1)^S$，当$S=0$表示该浮点数为正数；当$S=1$表示该浮点数为负数</p>

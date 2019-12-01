@@ -428,6 +428,13 @@ figure.highlight {
     height: 100%;
     position: absolute; }
 
+.mermaid {
+  background: transparent;
+  font-size: 0.8em; }
+
+div.mermaid {
+  font-size: 0.8em; }
+
 .ins-section-container {
   position: relative;
   background: #f7f7f7; }
