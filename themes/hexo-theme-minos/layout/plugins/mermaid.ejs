@@ -1,0 +1,9 @@
+<% if (!head && !(has_config('plugins.mermaid') && get_config('plugins.mermaid') === false)) { %>
+<script src="https://unpkg.com/mermaid@8.4.2/dist/mermaid.min.js"></script>
+<script>
+    if (window.mermaid) {
+        mermaid.initialize({theme: 'forest'}); // {theme: 'forest'}
+        console.log('mermaid init');
+    }
+  </script>
+<% } %>

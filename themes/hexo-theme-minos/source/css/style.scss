@@ -626,4 +626,14 @@ figure.highlight {
     }
 }
 
+.mermaid {
+    background: transparent;
+    font-size: 0.8em;
+}
+
+div.mermaid {
+    // font-family: 'trebuchet ms', verdana, arial;
+    font-size: 0.8em;
+}
+
 @import "insight";
